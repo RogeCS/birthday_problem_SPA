@@ -3,9 +3,10 @@ import { router } from './routes/index';
 import './styles/index.css';
 
 let prevScrollpos = window.pageYOffset;
+
 window.onscroll = function() {
   let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
+  if (prevScrollpos > currentScrollPos || currentScrollPos < 40) {
     document.getElementById("header").style.top = "0";
   } else {
     document.getElementById("header").style.top = "-50px";
