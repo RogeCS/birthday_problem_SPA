@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #FCF9F7;
+  color: #333237;
+}
+.grid_container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+#header {
+  background-color: #95769C;/* Black background color */
+  position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  width: 100%; /* Full width */
+  transition: top 0.5s; /* Transition effect when sliding down (and up) */
+  z-index: 9;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 30px;
+}
+
+
+.header-logo{
+  height: 5px;
+  width: 5px;
+  background-image: url("../assets/icons/png/045-coding.png");
+  z-index: 10;
+}
+
+#open-nav {
+  justify-self: end;
+  align-self: center;
+  grid-column: 2;
+  margin-right: 20px;
+  color: white;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #95769C;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: #A799A7;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+footer {
+  background-color: #95769C; /* Black background color */
+  color: white;
+  height: auto;
+
+}
+
+footer .footer-decorator {
+  width: 100%;
+  height: 10px;
+  background-color: #A799A7;
+}
+footer .contact-container{
+  display: grid;
+  grid-template-rows: 3fr 50px 60px;
+}
+
+.main-contact{
+  display: grid;
+  grid-template-rows: 1fr 70px;
+  width: 90%;
+  margin: auto;
+}
+
+.main-contact h3 {
+  letter-spacing: 2px;
+}
+
+.contact-info{
+  margin: 20px 0;
+}
+
+.redes-info{
+  margin: 20px 0;
+}
+
+
+footer .licence {
+  text-align: center;
+  display: inline-block;
+}
+
+hr.solid {
+  height: 1px;
+  border: 0;
+  color: #333;
+  background-color: #A799A7;
+  width: 70%;
+  margin: auto;
+}
+
+
+footer a{
+  color: white;
+}
+
+footer img{
+  width: 35px;
+}
+
+@media (min-width: 750px){
+  .main-contact{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .contact-info{
+    justify-self: center;
+  }
+  .redes-info{
+    justify-self: center;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

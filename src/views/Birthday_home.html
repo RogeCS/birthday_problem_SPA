@@ -1,0 +1,46 @@
+<section class="grid_container graphs">
+  <div class="main--container animate__animated animate__fadeIn">
+    <article class="main-article">
+      <h2 class="animate__animated animate__zoomIn">El problema del cumpleaños</h2>
+      <div class="animate__animated animate__fadeInUp animate__delay-1s">
+        <p>La paradoja del cumpleaños o problema del cumpleaños establece que en un grupo de apenas 23 personas podemos ver una probabilidad mayor al cincuenta porciento de que al menos dos personas de este grupo de 23 personas cumplan el mismo día.</p>
+
+        <h3>¿Cómo puede ser que con tan solo 23 personas podemos llegar a tener hasta un 50.7% de que <strong>al menos</strong> dos cumplan el mismo día?</h3>
+
+        <p>Calculemos la probabilidad de que, en una habitación con <em>n</em> personas, al menos dos cumplan años el mismo día, desechando los años bisiestos y las personas gemelas, y asumiendo que existen 365 cumpleaos que tienen la misma probabilidad. El truco es calcular primero la probabilidad de que ninguna persona cumpla años el mismo día que otra, la cual viene dada por la siguiente fórmula.</p>
+        <img class="eq1" src="../assets/latex/eq1.svg" alt="">
+        <br>
+        <img class="eq2" src="../assets/latex/eq2.svg" alt="">
+        <p>Ahora, 1 - <em>p</em> es la probabilidad de que al menos dos personas tengan el mismo día de cumpleaños. Para <em>n</em> = 23 se obtiene una probabilidad de alrededor de 0,507.</p>
+        <p><br></p>
+        <img class="eq3" src="../assets/latex/eq3.svg" alt="">
+        <p>Es importante no confundir la probabilidad de que al menos dos personas cumplan el mismo día a que al menos una persona cumpla el mismo día que tú (gráfica azul). Dicha probabilidad se obtiene con la siguiente fórmula</p>
+        <img class="eq4" src="../assets/latex/eq4.svg" alt="">
+      </div>
+    </article>
+    <div class="main-article">
+      <h2 class="animate__animated animate__zoomIn">Gráficas</h2>
+    </div>
+    <div class="container animate__animated animate__zoomIn">
+      <p>Probabilidad de que en un grupo, <b>a lo menos</b> dos personas cumplan el mismo día</p>
+      <canvas id="chart2"></canvas>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="70" value="25" class="slider2" id="myRange2">
+      </div>
+    </div>
+    <div class="container animate__animated animate__zoomIn">
+      <p>Probabilidad de que en un grupo, <b>por lo menos</b> alguien cumpla el mismo día que tú</p>
+      <canvas id="chart"></canvas>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="2371" value="25" class="slider" id="myRange">
+      </div>
+    </div>
+    <div class="main-article">
+      <h2 class="animate__animated animate__zoomIn">Conclusión</h2>
+      <p>Si tienes 25 amigos la probabilidad de que uno cumpla el mismo día que tú es de 6.25% y la probabilidad de que dos personas cumplan el mismo día (sin importar el día) es de 56.8% </p>
+      <br>
+      <p>Entonces si alguien cumple el mismo día que tú entre tus amigos consideralo una coincidencia intresante y reclamale por nacer el mismo día. Pero si tienes dos amigos que cumplen el mismo día no lo consideres tan raro.</p>
+      <p class="margin"></p>
+    </div>
+  </div>
+</section>

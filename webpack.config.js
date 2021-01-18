@@ -14,11 +14,34 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader'
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+      {
         test: /\.js?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
         }
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-url-loader',
+            options: {
+              limit: 10000,
+            },
+          },
+        ],
       }
     ]
   },
@@ -26,17 +49,8 @@ module.exports = {
     new HtmlWebpackPlugin(
       {
         inject: true,
-        template: './public/index.html',
-        filename: './index.html',
+        template: './src/index.html',
       }
-    ),
-    new CopyWebpackPlugin(
-      [
-        {
-          from: './src/styles/styles.css',
-          to: ''
-        }
-      ]
     )
   ]
 }
